@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Погода онлайн</h1>
+        <button class="theme-toggle" id="theme-toggle">
+            <span id="theme-icon">🌙</span>
+            <span id="theme-text">Темная тема</span>
+        </button>
+    </header>
+
+    <div class="search-container">
+        <input
+                type="text"
+                id="city-input"
+                placeholder="Введите название города"
+                aria-label="Введите название города"/>
+        <button id="search-btn">Показать погоду</button>
+        <button id="location-btn">Мое местоположение</button>
+    </div>
+
+    <div class="error-message" id="error-message"></div>
+
+    <div class="loading" id="loading">
+         <div class="spinner"></div>
+         <p>Загрузка данных о погоде...</p>
+    </div>
+
+    <div class="weather-card" id="weather-card">
+        <div class="weather-header">
+            <div>
+                <h2 class="city-name" id="city-name">Город, Страна</h2>
+                <div class="temperature" id="temperature">0°C</div>
+                <div class="weather-description" id="weather-description">Погодные условия</div>
+            </div>
+            <img class="weather-icon" id="weather-icon" src="" alt="Погода">
+        </div>
+
+        <div class="weather-details">
+            <div class="details-item">
+                <span class="details-label">Ощущается как</span>
+                <span class="details-value" id="feels-like">0°C</span>
+            </div>
+            <div class="details-item">
+                <span class="details-label">Влажность</span>
+                <span class="details-value" id="humidity">0%</span>
+            </div>
+            <div class="details-item">
+                <span class="details-label">Скорость ветра</span>
+                <span class="details-value" id="wind-speed">0%</span>
+            </div>
+            <div class="details-item">
+                <span class="details-label">Давление</span>
+                <span class="details-value" id="pressure">0%</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
